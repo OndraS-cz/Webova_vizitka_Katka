@@ -1,0 +1,356 @@
+/* --- ZÁKLADNÍ NASTAVENÍ --- */
+:root {
+    --primary-blue: #2b50d8;
+    --accent-green: #d4f86d;
+    --text-dark: #1a1a1a;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* --- ANIMACE (REVEAL EFEKT) --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- SEKCE 1: HERO --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(255,255,255,0.45), rgba(255,255,255,0.45)), 
+                url('Eiffel_tower_2.jpg') no-repeat center center;
+    background-size: cover; 
+    
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+.hero-content {
+    color: #0e1d40;
+    padding-top: 180px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.main-title {
+    font-size: 90px;
+    font-weight: 700;
+    margin-bottom: 0;
+    line-height: 1.2;
+}
+
+.prof-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 1.5em;
+    line-height: 1.4;
+}
+
+/* Mobilní úprava pro sekci Hero */
+@media (max-width: 768px) {
+    .hero {
+        background-position: center center;
+    }
+    .hero-content { 
+        padding-top: 160px; 
+    }
+    .main-title { font-size: 36px; }
+    .prof-title { font-size: 26px; margin-top: 1.5em; }
+}
+
+/* --- SEKCE 2: O MNĚ --- */
+.about { 
+    background-color: #1e3a8a;
+    color: var(--white); 
+}
+
+.about .text-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 1em; 
+}
+
+.about .text-content p {
+    font-size: 20px;
+    margin-bottom: 1.2em; 
+}
+
+.highlight a { 
+    color: var(--white); 
+    text-decoration: underline; 
+    font-weight: bold; 
+}
+
+.about .image-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about img { 
+    width: 90%; 
+    height: auto;
+    border-radius: 0 100px 0 100px; 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* Mobilní úprava pro sekci O mně */
+@media (max-width: 768px) {
+    .about .text-content h2 { 
+        font-size: 32px; 
+        margin-bottom: 0.8em;
+    }
+    .about .text-content p { 
+        font-size: 18px; 
+    }
+    .about img { 
+        width: 100%; 
+        margin-top: 1rem;
+    }
+}
+
+/* --- SEKCE 3: SLUŽBY --- */
+.services {
+    background-color: var(--white);
+    padding: 0.25rem 0 0.5rem 0; 
+}
+
+.services h2 { 
+    text-align: center; 
+    margin-bottom: 4.5rem; 
+    font-size: 40px; 
+    color: #1a1a1a;
+    font-weight: 700;
+}
+
+.service-grid { 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 3rem; 
+}
+
+.card { 
+    background-color: #1e3a8a; 
+    color: var(--white); 
+    border-radius: 25px; 
+    overflow: hidden; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover { 
+    transform: translateY(-10px); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.card-img { 
+    height: 220px; 
+    background-size: cover; 
+    background-position: center;
+    width: 100%;
+    border-bottom: 3px solid var(--accent-green);
+}
+
+.card-text { 
+    padding: 2rem 1.5rem; 
+    text-align: center; 
+    font-size: 36px; 
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.card-text span { 
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 400; 
+    font-size: 20px; 
+    opacity: 0.85; 
+}
+
+/* --- Mobilní úprava pro sekci Služby --- */
+@media (max-width: 768px) {
+    .services {
+        padding-top: 0.12rem;
+        padding-bottom: 0.5rem;
+    }
+    
+    .services h2 { 
+        font-size: 32px; 
+        margin-bottom: 2.25rem; 
+    }
+}
+
+/* --- SEKCE 4: KONTAKT (FOOTER) --- */
+.contact { 
+    background-color: var(--accent-green); 
+    padding: 4rem 0; 
+}
+
+.contact .container { 
+    padding: 0 1.5rem; 
+}
+
+.contact-info h2 { 
+    font-size: 40px; 
+    font-weight: 700;
+    line-height: 1.1; 
+    margin-bottom: 2rem; 
+    color: #0e1d40;
+}
+
+.info-item { 
+    margin-bottom: 1.5rem; 
+}
+
+.info-item strong { 
+    display: block; 
+    text-transform: uppercase; 
+    font-size: 0.85rem; 
+    letter-spacing: 1px; 
+    color: rgba(14, 29, 64, 0.7);
+}
+
+.info-item p, 
+.info-item a, 
+.registry-link { 
+    font-size: 20px; 
+    color: #0e1d40;
+}
+
+.contact a { 
+    text-decoration: none; 
+    font-weight: 500; 
+    border-bottom: 1px solid rgba(14, 29, 64, 0.3);
+}
+
+.contact-image img { 
+    width: 100%; 
+    border-radius: 0 100px 0 100px; 
+    display: block;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* --- Mobilní úprava pro sekci KONTAKT --- */
+@media (max-width: 768px) {
+    .contact {
+        padding: 2rem 0;
+    }
+    
+    .contact-info h2 { 
+        font-size: 32px; 
+    }
+    
+    .info-item p, 
+    .info-item a, 
+    .registry-link { 
+        font-size: 18px; 
+    }
+
+    .contact-image { 
+        order: 2; 
+        margin-top: 2rem;
+    }
+    
+    .contact-info { 
+        order: 1; 
+    }
+}
+
+/* Výchozí nastavení pro desktop: odkaz na telefon se chová jako běžný text */
+.phone-link {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    border-bottom: none !important;
+}
+
+/* Mobilní zobrazení: odkaz na telefon se opět aktivuje */
+@media (max-width: 768px) {
+    .phone-link {
+        pointer-events: auto;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+/* --- FINÁLNÍ OPRAVA PRO MOBILNÍ ZOBRAZENÍ --- */
+@media (max-width: 768px) {
+    /* Oprava pro sekce O mně a Kontakt (Grid) */
+    .grid { 
+        grid-template-columns: 1fr !important; 
+        gap: 2rem; 
+    }
+
+    /* Oprava pro sekci Služby (Karty) */
+    .service-grid { 
+        grid-template-columns: 1fr !important; 
+        padding: 0 1rem;
+        gap: 3rem; 
+    }
+
+    /* Pořadí v sekci O mně: Text nahoře, fotka pod ním */
+    .about .image-box { order: 2; }
+    .about .text-content { order: 1; }
+
+    /* Pořadí v sekci Kontakt: Text nahoře, fotka pod ním */
+    .contact-info { order: 1; padding-bottom: 2rem; }
+    .contact-image { order: 2; }
+
+    /* Hero sekce - doladění velikostí */
+    .main-title { font-size: 36px !important; }
+    .prof-title { font-size: 26px !important; }
+    .hero-content { padding-top: 160px !important; }
+
+    /* Sjednocení textu v sekcích pro mobil */
+    .about .text-content h2, 
+    .services h2, 
+    .contact-info h2 { 
+        font-size: 32px !important; 
+    }
+    
+    .about .text-content p, 
+    .info-item p, 
+    .info-item a { 
+        font-size: 18px !important; 
+    }
+    
+    .about img, .contact-image img { 
+        border-radius: 0 60px 0 60px !important; 
+        width: 100%;
+        max-width: 100%;
+    }
+}

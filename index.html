@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mgr. Kateřina Severová | Soudní překladatelka</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1 class="main-title">Mgr. Kateřina Severová</h1>
+        <p class="prof-title">soudní překladatel a tlumočník<br>lektor francouzského jazyka</p>
+    </div>
+    
+</header>
+
+    <section class="about reveal">
+        <div class="container grid">
+            <div class="text-content">
+                <h2>Mgr. Kateřina Severová</h2>
+                <p>Po ukončení vysokoškolského studia jsem se věnovala výuce dějepisu na základní škole. K tomu jsem začala dodávat služby i jazykovým školám jako lektor a překladatel francouzského jazyka.</p>
+                <p>Od roku 2008 se již lektorské, překladatelské a tlumočnické profesi věnuji na plný úvazek.</p>
+                <p>V srpnu 2014 jsem úspěšně složila zkoušky pro Soudní tlumočníky a překladatele.</p>
+                <p class="highlight">Volně přeloženo - mám <a href="https://seznat.justice.cz/tlumocnik?query=%7B%22filter%22%3A%7B%22druhyOsoby%22%3A%5B%5D%2C%22fullText%22%3A%2273822469%22%2C%22vcetnePozastavenych%22%3Afalse%2C%22vcetneZaniklych%22%3Afalse%7D%2C%22strankovani%22%3A%7B%22pocetNaStranku%22%3A50%7D%2C%22razeni%22%3A%7B%22hodnota%22%3A%22jmeno%22%2C%22smer%22%3A0%7D%7D" target="_blank">kulaté razítko</a>! 😉</p>
+            </div>
+            <div class="image-box">
+                <img src="o_mne.jpg" alt="O mně">
+            </div>
+        </div>
+    </section>
+
+    <section class="services reveal">
+        <div class="container">
+            <h2>S čím Vám můžu pomoci</h2>
+            <div class="service-grid">
+                <div class="card reveal">
+                    <div class="card-img" style="background-image: url('preklady.jpg');"></div>
+                    <div class="card-text">Překlady listin<br><span>(úředních i soukromých)</span></div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img" style="background-image: url('tlumoceni.jpg');"></div>
+                    <div class="card-text">Tlumočení<br><span>(např. svatby či soudní stání)</span></div>
+                </div>
+                <div class="card reveal">
+                    <div class="card-img" style="background-image: url('vyuka.jpg');"></div>
+                    <div class="card-text">Výuka jazyka<br><span>(firemní i soukromé kurzy)</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer class="contact reveal">
+    <div class="container grid">
+        <div class="contact-image">
+            <img src="Eiffel_tower_2.jpg">
+        </div>
+    <div class="contact-info">
+            <h2>Neváhejte<br>mě kontaktovat</h2>
+            <div class="info-item">
+                <strong>Adresa</strong>
+                <p>Daliborova 194/12, 460 07 Liberec, Czech Republic</p>
+            </div>
+            <div class="info-item">
+                <strong>E-mail</strong>
+                <p><a href="mailto:Severova.Katerina@centrum.cz" target="_blank" rel="noopener noreferrer">Severova.Katerina@centrum.cz</a></p>
+            </div>
+            <div class="info-item">
+                <strong>Telefon</strong>
+                <p><a href="tel:+420607975403" class="phone-link" target="_blank" rel="noopener noreferrer">+420 607 975 403</a></p>
+            </div>
+            <div class="info-item">
+                <strong>IČO</strong>
+                    <p><a href="https://ares.gov.cz/ekonomicke-subjekty?ico=73822469" target="_blank">73822469</a></p>
+            </div>
+            <p class="registry-link">Seznam soudních znalců, tlumočníků a překladatelů naleznete <a href="https://seznat.justice.cz/tlumocnik?query=%7B%22filter%22%3A%7B%22druhyOsoby%22%3A%5B%5D%2C%22fullText%22%3A%2273822469%22%2C%22vcetnePozastavenych%22%3Afalse%2C%22vcetneZaniklych%22%3Afalse%7D%2C%22strankovani%22%3A%7B%22pocetNaStranku%22%3A50%7D%2C%22razeni%22%3A%7B%22hodnota%22%3A%22jmeno%22%2C%22smer%22%3A0%7D%7D" target="_blank">ZDE</a></p>
+        </div>
+    </div>
+
+    <div style="width: 100%; padding: 4rem 1.5rem 4rem 1.5rem; text-align: center;">
+        <p style="max-width: 1100px; margin: 0 auto; font-size: 12px; opacity: 0.6; line-height: 1.6; color: #0e1d40;">
+            Tento web nepoužívá žádné soubory cookies a neshromažďuje osobní údaje návštěvníků. <br>
+            Zaslané e-maily jsou využívány výhradně pro komunikaci v rámci poptávky služeb.
+        </p>
+    </div>
+</footer>
+
+    <script>
+        const observerOptions = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    </script>
+</body>
+</html>
