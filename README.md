@@ -3,7 +3,7 @@
 Tento projekt obsahuje moderní, plně responzivní jednostránkový web (One-Page Website) vytvořený pro soudní překladatelku a tlumočnici.
 
 ## 🚀 Živá ukázka
-Web je dostupný na adrese: https://ondras-cz.github.io/Webova_vizitka_Katka/
+Web je dostupný na adrese: https://katerina.severa.name/
 
 ## ✨ Klíčové vlastnosti
 * **Moderní design:** Čistý a profesionální vzhled inspirovaný návrhem z Canvy.
