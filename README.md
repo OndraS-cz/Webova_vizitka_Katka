@@ -21,6 +21,7 @@ Web je dostupný na adrese: https://katerina.severa.name/
 
 ## 📂 Struktura projektu
 * `index.html` - Hlavní struktura webu.
+* `fr.html` - Francouzská verze.
 * `style.css` - Kompletní stylování a mobilní responzivita.
 * `/` - Adresář obsahuje potřebné obrazové podklady (.jpg).
 

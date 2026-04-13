@@ -354,3 +354,48 @@ body {
         max-width: 100%;
     }
 }
+
+/* Styl pro přepínač jazyků s vlajkami */
+.lang-switch {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.lang-switch a {
+    display: block;
+    width: 45px;
+    transition: transform 0.2s ease;
+}
+
+.lang-switch a:hover {
+    transform: scale(1.1);
+}
+
+.lang-switch img {
+    width: 100%;
+    height: 30px; 
+    border-radius: 4px; /* Lehce menší zaoblení, aby ladilo s tvarem */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2); /* Výraznější stín místo rámečku */
+    border: none; /* TADY JSME ODSTRANILI TEN BÍLÝ RÁMEČEK */
+    display: block;
+    object-fit: cover; 
+    object-position: center;
+    padding: 0; /* Zajišťuje, že se neukáže žádné vnitřní volné místo */
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .lang-switch {
+        top: 15px;
+        right: 15px;
+    }
+    .lang-switch a {
+        width: 35px; /* Menší šířka pro mobil */
+    }
+    .lang-switch img {
+        height: 24px; /* Pevná výška pro mobil, která ořízne proužky */
+        object-fit: cover; /* Klíčové pro odstranění bílých okrajů */
+    }
+}
